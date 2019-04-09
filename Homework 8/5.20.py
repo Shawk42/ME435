@@ -71,8 +71,12 @@ while abs(dev) >= 0.01:
         break
 
 
+"""PART [C]"""
+DeltaT_out = T_i-t_o
+DeltaT_in = T_o-t_i
 
-
+TempDiff = (DeltaT_out-DeltaT_in)/np.log(DeltaT_out/DeltaT_in)
+Area = Q_dot/(U*TempDiff)
 
 
 
@@ -87,6 +91,10 @@ print("")
 print("PART B - Solution")
 #print("Outlet Temperature Found")
 print("t_o = ",t_o-273.15," [C]")
+
+print("PART C - Solution")
+#print("Outlet Temperature Found")
+print("Area",Area," [m^2]")
 
 """Verifications"""
 #Checking if Hot fluid gets warmer
