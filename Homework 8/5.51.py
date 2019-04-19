@@ -13,8 +13,8 @@ t_o = 83
 
 Delt_out =abs(T_o-t_o)
 DelT_in = T_i-t_i
-print(DelT_in)
-print(Delt_out)
+#print(DelT_in)
+#print(Delt_out)
 LMTD_num = Delt_out-DelT_in
 LMTD_dem = np.log(Delt_out/DelT_in)
 LMTD = LMTD_num/LMTD_dem

@@ -1,3 +1,4 @@
+print("Problem 5.40")
 import numpy as np
 
 """GIVENS"""
@@ -23,7 +24,7 @@ ID_fouled = ID_clean*(np.exp(-(2*kf_i*Rf_pp_i)/(ID_clean)))
 
 ID = np.array([ID_clean,ID_fouled])
 
-Area_clean = ID.item(0)**2*(np.pi()/4)
+Area_clean = ID.item(0)**2*(np.pi/4)
 V_hotclean = Vdot_cold*Area_clean
 V_hotfouled = V_hotclean*(1-0.025)
 V_hot = np.array([V_hotclean,V_hotfouled])
