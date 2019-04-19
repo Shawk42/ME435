@@ -39,16 +39,13 @@ mdot_1 = num/dem
 #Checking
 a = (mdot_1*h_1)+h_3*(mdot_2-mdot_1)
 b = mdot_2*h_2
-print(a,"a")
-print(b,"b")
-
-print(mdot_1,"mdot")
 
 
 
+#PRINTING
+print("[Part A] Mdot of incoming water",mdot_1,"lbm/s")
+print("I was unaable to properly compute the mdot, it should not be negative but the units and values seem to "
+      "check out")
 
-"""MATRIX printing"""
-Mdots = np.array([mdot_1,mdot_2])
-print(Mdots)
 
 

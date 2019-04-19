@@ -7,10 +7,9 @@ Vdot_air = 3500/2118.88    #Vdot of air in m^3 per second
 
 i_max = 1001
 P_2_master = np.linspace(200000,500000,i_max)
-y = np.array([640])
-i = 0
+y = np.array([])
 
-while i < i_max:
+for p_master in range(200000,500000,0.01):
     P_2 = P_2_master.item(i)
     '''Initial State Tables'''
     #Everything is in base SI units (K,Pa,J,etc.)
@@ -80,6 +79,7 @@ while i < i_max:
 
 
 """SOLUTION C"""
+
 
 x = np.linspace(2,5,i_max+1)
 plt.plot(x,y)
