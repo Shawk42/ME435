@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 n_c = 0.83   #Efficenry of each compressor
 Vdot_air = 3500/2118.88    #Vdot of air in m^3 per second
 
-i_max = 1001
+i_max = 101
 P_2_master = np.linspace(200000,500000,i_max)
 y = np.array([])
 
