@@ -3,8 +3,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 """GIVENS"""
-V_dot = 400     #[gpm] 400 gpm required
-#V_dot = np.linspace(400,600,1001)
+#V_dot = 400     #[gpm] 400 gpm required
+V_dot = np.linspace(400,600,1001)
 Delta_Z = 30    #[ft]
 L = 85          #[ft]
 
@@ -22,7 +22,7 @@ D_in = D*12                 #[in] Diamter of pipe                   - Correct Co
 V_dot_ft = V_dot*0.002228   #[ft^3/s] flow rate of water            - Correct Conversion
 V_dot_in = V_dot_ft*1728    #[in^3/s] flow rate of water
 Area_in = np.pi*(D_in/2)**2 #[in^2] cross sectional area of pipe
-V_in = V_dot_in*Area_in     #[in/s] velocity of water
+V_in = V_dot_in/Area_in     #[in/s] velocity of water
 V = V_in*(1/12)             #[ft/s] velocity of water
 
 Re = (rho*V_in*D_in)/mu
@@ -65,6 +65,10 @@ K_ext = (K_1/Re)+K_inf*(1+(1/D))
 Hp = Delta_Z+(f*(L/D)+K_ent+3*K_e+K_ext)*(V**2/(2*g))
 
 
-quit()
+
 plt.plot(V_dot,Hp)
+plt.xlabel("Flow [gpm]")
+plt.ylabel("Head of System")
 plt.show()
+
+print("Find sheet and complete problem")
